@@ -24,7 +24,9 @@ def sysCall_actuation():
     # put your actuation code here
     #sim.setJointTargetVelocity(motor, -5)
     global x1, x2, x3, x4, x5, x6
-    U = 103 * x4 - 0.035 * x2 + 1.82 * x6 - 0.000099 * x5 - 0.59 * x3 + 0.36 * x1 
+    #U = 103 * x4 - 0.035 * x2 + 1.82 * x6 - 0.000099 * x5 - 0.59 * x3 + 0.36 * x1 
+    #U = 50 * x4 - 0.045 * x2 + 1.82 * x6 - 0.0000998 * x5 - 0.59 * x3 + 0.3098 * x1 
+    U = 30 * x4 - 0.045 * x2 + 1.82 * x6 - 0.0000998 * x5 - 0.59 * x3 + 0.38 * x1 
     sim.setJointTargetVelocity(motor, -U)
     pass
 
@@ -53,8 +55,8 @@ def sysCall_sensing():
     x5 = x5 + x2
     x6 = x6 + x4
     
-    prev_x1_err = x1
-    prev_x2_err = x2
+    #prev_x1_err = x1
+    #prev_x2_err = x2
     #print(str(roll_ini) + " " + str(roll_b))
     #U = 25 * x4 #- 0.0008 * x5 - 0.008 * x2 - 0.0002 * x3
     #U = 25 * x4 + 0.00000005 * x3 + 0.0008 * x2 + 0.00008 * x1 + 0.00000005 * x5
@@ -67,25 +69,7 @@ def sysCall_sensing():
     #oooooU = 103 * x4 - 0.035 * x2 + 1.82 * x6 - 0.000099 * x5 - 0.59 * x3 + 0.36 * x1 
     #U =  20* x4 - 0.5* x3
     #sim.setJointTargetVelocity(motor, -U)
-    #if x2<0.00:
-        
-     #sim.setJointTargetVelocity(motor, -U)
-    #if x2 ==0:
-        #c = 10 * x4
-        #sim.setJointTargetVelocity(motor, c)
-        #set_time = 0.90
-        #c = 22 * x4
-        #while set_time>0:
-            #sim.setJointTargetVelocity(motor, c)
-            #set_time = set_time-0.010
-            #print(1) 
-            
-            
-               
-        
-    
-        
-      
+   
     print(str(yaw_setpoint) + " " + str(x2))
     
     
