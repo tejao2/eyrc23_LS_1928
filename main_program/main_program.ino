@@ -25,7 +25,16 @@ void dc_motor_init(){
 }
 
 void motor_control(int pwm) {
-  
+ 
+  // if(pwm > 255)
+  //  pwm = 255;
+  // if (pwm > 0 && pwm <=55)
+  //   pwm = 55;
+  // if(pwm < -255)
+  //  pwm = -255;
+//   if (pwm < 0 && pwm >= -55)
+//     pwm = -55;
+ Serial.println(pwm);
   if (pwm < 0) {
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
@@ -35,11 +44,9 @@ void motor_control(int pwm) {
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
   }
-  if(pwm > 255)
-   pwm = 255;
-  if (pwm < -255)
-   pwm = -255;
-  analogWrite(enA, pwm);
+  // digitalWrite(in1, LOW);
+  // digitalWrite(in2, HIGH);
+  analogWrite(enA, pwm+62);
 }
 
 void setup() {
@@ -56,25 +63,33 @@ void setup() {
   mpu.calcOffsets(); // gyro and accelero
   Serial.println("Done!\n");
   dc_motor_init();
-roll_ini = mpu.getAngleX();
-yaw_ini = mpu.getAngleZ();
+//roll_ini = mpu.getAngleX();
+//yaw_ini = mpu.getAngleZ();
+//Serial.println(roll_ini);
 }
 
 void loop() {
   mpu.update();
   
-  if((millis()-timer)>10){ // print data every 10ms
+  if((millis()-timer)>20){ // print data every 10ms
   Serial.print("X : ");
-  roll_pos_err = roll_ini - mpu.getAngleX()
+  roll_pos_err = 0 - mpu.getAngleX();
   Serial.print(roll_pos_err);
-  //Serial.print("\tY : ");
-  //Serial.print(mpu.getAngleY());
+  Serial.print("\tX_vel : ");
+  roll_vel_err = 0 - mpu.getGyroX();
+  Serial.print(roll_vel_err);
   Serial.print("\tZ : ");
-  yaw_pos_err = yaw_ini - mpu.getAngleZ();
+  yaw_pos_err = 0 - mpu.getAngleZ();
   Serial.println(yaw_pos_err);
+  
+  
+  roll_itgl_err += roll_pos_err;
+  u = 2 * roll_pos_err - 0.5 * yaw_pos_err ;// + 0.002* roll_vel_err + 0.008 * roll_itgl_err;//;
+  //Serial.println (-u);
+  motor_control(-u);
   timer = millis();  
+
   }
- u = 1 * roll_pos_err + 1 * yaw_pos_err;
- motor_control(fabs(u));
+
 
 }
