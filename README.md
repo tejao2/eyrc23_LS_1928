@@ -14,7 +14,7 @@ Lunar Scout is an innovative omni wheel self-balancing bike robot designed for p
 - Combination of simulator and hardware implementation for comprehensive testing and development.
 
 **Team Members:**
-1. Sai Santosh Tejendra.T (Team Leader)
+1. Sai Santosh Tejendra. T (Team Leader)
 2. Lokesh. S
 3. Yuvaneshwaran .S
 
