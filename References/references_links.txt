@@ -1,0 +1,23 @@
+title : Design and implementation of fractional PID controller for rotary inverted pendulum 
+
+link/location : https://ieeexplore.ieee.org/abstract/document/8408317/
+
+
+title : Optimizing Reinforcement Learning Control Model in Furuta Pendulum and Transferring it to Real-World
+
+link : https://ieeexplore.ieee.org/document/10234431#full-text-header
+
+
+https://www.researchsquare.com/article/rs-2373423/v1
+
+
+http://engineering.nyu.edu/mechatronics/Control_Lab/ROTPEN_SE.pdf
+
+
+https://ijsetr.com/uploads/312645IJSETR9920-553.pdf
+
+https://nps.edu/documents/105873337/0/Rotary+Pendulum+Workbook+_Instructor_.pdf/e17aa0a2-5f98-4957-b4a7-e80f0f52a4a3?t=1436282377000
+
+https://www.youtube.com/watch?v=HJAlgMQKsF4&t=2205s - task5 -faq youtube video
+
+
