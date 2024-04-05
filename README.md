@@ -44,5 +44,4 @@ Simulator + Hardware
 5. `Documentation/`: Documentation related to mathematical modeling, control algorithms, and system architecture.
 6. `Images/`: Images of the Lunar Scout robot and its components.
 7. `Videos/`: Demonstration videos showcasing the robot's capabilities.
-8. `License`: Licensing information for the project.
 
