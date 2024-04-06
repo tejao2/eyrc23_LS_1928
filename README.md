@@ -10,7 +10,7 @@ Lunar Scout is an innovative omni wheel self-balancing bike robot designed for p
 - Integration of PID control and Linear Quadratic Regulator for precise control.
 - Utilization of Euler-Lagrangian mechanics for mathematical modeling.
 - Implementation of Python and Octave programming languages for system control and simulation.
-- 3D designing for mechanical components using simulation software such as CoppeliaSim.
+- 3D designing for mechanical components using simulation software such as CoppeliaSim/Autocad Fusion360.
 - Combination of simulator and hardware implementation for comprehensive testing and development.
 
 **Team Members:**
