@@ -4,7 +4,7 @@
 Lunar Scout is an innovative omni wheel self-balancing bike robot designed for patrolling and scouting the challenging terrain of the lunar colony. Equipped with advanced self-balancing technology and auto-steering features, Lunar Scout effortlessly navigates through rough lunar landscapes, signaling potential hazards or emergencies to the command center. This project was developed as part of eYRC 2023-24, focusing on enhancing skills in control systems, mathematical modeling, mechanical design, embedded systems, and programming.
 
 **Key Features:**
-- Self-balancing technology for traversing lunar terrain.
+- Self-balancing technology for traversing.
 - Auto-steering capabilities for effortless navigation.
 - Rotary steer mechanism ensures balance on steep slopes and uneven surfaces.
 - Integration of PID control and Linear Quadratic Regulator for precise control.
