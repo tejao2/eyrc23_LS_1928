@@ -25,6 +25,7 @@ Lunar Scout is an innovative omni wheel self-balancing bike robot designed for p
 - PID Control
 - Linear Quadratic Regulator
 - Python Programming
+- Embedded systems
 - Octave Programming
 - 3D Designing
 
